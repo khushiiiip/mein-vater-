@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Father's Day, Papu ❤️<br> my papu is the coolest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #FFD6E8;
+      --pink-deep: #FF9EC4;
+      --lavender: #E8D5F5;
+      --lavender-deep: #C9A8E8;
+      --sky-deep: #7EC8E8;
+      --peach-deep: #FFB88C;
+      --mint-deep: #7DD4A8;
+      --gold-deep: #F5A623;
+      --cream: #FFF9F5;
+      --text: #4A3F55;
+      --text-light: #7A6B85;
+      --glass: rgba(255, 255, 255, 0.55);
+      --glass-border: rgba(255, 255, 255, 0.75);
+      --shadow-soft: 0 8px 32px rgba(180, 140, 200, 0.18);
+      --shadow-hover: 0 16px 48px rgba(180, 140, 200, 0.28);
+      --font-display: 'Fredoka', sans-serif;
+      --font-body: 'Nunito', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--cream);
+      overflow-x: hidden;
+    }
+
+    .sky-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, #FFE8F5 0%, #E8F4FD 35%, #FFF5E8 70%, #F0FFF4 100%);
+    }
+
+    .decor-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .float-heart { position: absolute; animation: floatHeart var(--dur, 6s) ease-in-out infinite; animation-delay: var(--delay, 0s); opacity: var(--op, 0.6); }
+    .float-star { position: absolute; animation: twinkle var(--dur, 3s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+    .float-cloud { position: absolute; animation: driftCloud var(--dur, 25s) linear infinite; animation-delay: var(--delay, 0s); opacity: 0.85; }
+    .float-flower { position: absolute; animation: swayFlower var(--dur, 5s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+
+    @keyframes floatHeart {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+    @keyframes driftCloud {
+      0% { transform: translateX(-120px); }
+      100% { transform: translateX(calc(100vw + 120px)); }
+    }
+    @keyframes swayFlower {
+      0%, 100% { transform: rotate(-8deg); }
+      50% { transform: rotate(8deg); }
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.4)); }
+      50% { filter: drop-shadow(0 0 20px rgba(255, 200, 100, 0.8)); }
+    }
+    @keyframes birdFly {
+      0% { transform: translateX(-50px); }
+      100% { transform: translateX(calc(100vw + 50px)); }
+    }
+
+    main { position: relative; z-index: 1; }
+
+    section {
+      padding: 4rem 1.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      text-align: center;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep), var(--sky-deep));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 2px solid var(--glass-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--lavender-deep), transparent);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      max-width: 100%;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6.5vw, 3.8rem);
+      line-height: 1.15;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #FF6B9D, #C084FC, #60A5FA, #F59E0B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-illustration {
+      width: 100%;
+      max-width: 780px;
+      animation: bob 4s ease-in-out infinite;
+    }
+
+    .hero-illustration svg {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 12px 30px rgba(150, 120, 180, 0.2));
+    }
+
+  /* PICTURE CARDS */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .pic-card {
+      padding: 1.25rem 1rem 1rem;
+      text-align: center;
+    }
+
+    .pic-card-art {
+      width: 100%;
+      max-width: 160px;
+      margin: 0 auto 0.75rem;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .pic-card:hover .pic-card-art { transform: scale(1.1) rotate(-3deg); }
+
+    .pic-card-art svg { width: 100%; height: auto; }
+
+    .pic-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* ADVENTURE GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .gallery-art {
+      width: 100%;
+      margin-bottom: 0.75rem;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .gallery-art svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-art svg { transform: scale(1.05); }
+
+    .gallery-item span {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* SEARCH VISUAL */
+    .search-visual {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .search-logo {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .search-logo .g1 { color: #FF6B9D; }
+    .search-logo .g2 { color: #C084FC; }
+    .search-logo .g3 { color: #60A5FA; }
+    .search-logo .g4 { color: #34D399; }
+
+    .search-icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .search-icon-card {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .search-icon-card svg { width: 72px; height: 72px; }
+
+    .search-icon-card span {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      color: var(--pink-deep);
+    }
+
+    /* THANK YOU */
+    .thank-you {
+      text-align: center;
+      padding: 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .thank-you-art {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .thank-you-art svg { width: 100%; height: auto; }
+
+    .thank-you-message .highlight {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .thank-you-message p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+  /* TROPHY */
+    .trophy-section {
+      text-align: center;
+      padding: 4rem 1.25rem 5rem;
+      max-width: 100%;
+    }
+
+    .trophy-wrap {
+      max-width: 360px;
+      margin: 0 auto 1.5rem;
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    .trophy-wrap svg { width: 100%; height: auto; }
+
+    .trophy-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      background: linear-gradient(135deg, #FFD700, var(--gold-deep), #FF8C42);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .closing-message {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--text-light);
+    }
+
+    .bird {
+      position: fixed;
+      z-index: 0;
+      animation: birdFly var(--dur, 30s) linear infinite;
+      animation-delay: var(--delay, 0s);
+      pointer-events: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    footer span { color: var(--pink-deep); }
+
+    @media (max-width: 600px) {
+      .search-icons { grid-template-columns: repeat(2, 1fr); }
+      section { padding: 3rem 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sky-bg"></div>
+
+  <div class="decor-layer" aria-hidden="true">
+    <svg class="float-heart" style="top:8%;left:5%;--dur:5s" width="28" height="28" viewBox="0 0 28 28"><path d="M14 24 C14 24 2 16 2 9 C2 5 5 3 8 3 C10.5 3 12.5 4.5 14 6.5 C15.5 4.5 17.5 3 20 3 C23 3 26 5 26 9 C26 16 14 24 14 24Z" fill="#FF9EC4"/></svg>
+    <svg class="float-heart" style="top:20%;right:8%;--dur:7s;--delay:1s;--op:0.45" width="22" height="22" viewBox="0 0 28 28"><path d="M14 24 C14 24 2 16 2 9 C2 5 5 3 8 3 C10.5 3 12.5 4.5 14 6.5 C15.5 4.5 17.5 3 20 3 C23 3 26 5 26 9 C26 16 14 24 14 24Z" fill="#C9A8E8"/></svg>
+    <svg class="float-star" style="top:12%;left:20%;--dur:2.5s" width="20" height="20" viewBox="0 0 20 20"><polygon points="10,1 12.5,7.5 19,7.5 13.5,12 16,19 10,15 4,19 6.5,12 1,7.5 7.5,7.5" fill="#FFD700"/></svg>
+    <svg class="float-star" style="top:40%;right:20%;--dur:3s;--delay:1s" width="16" height="16" viewBox="0 0 20 20"><polygon points="10,1 12.5,7.5 19,7.5 13.5,12 16,19 10,15 4,19 6.5,12 1,7.5 7.5,7.5" fill="#FFE066"/></svg>
+    <svg class="float-cloud" style="top:5%;--dur:35s" width="120" height="60" viewBox="0 0 120 60"><ellipse cx="40" cy="40" rx="35" ry="22" fill="white" opacity="0.9"/><ellipse cx="70" cy="35" rx="30" ry="25" fill="white"/><ellipse cx="95" cy="40" rx="25" ry="18" fill="white" opacity="0.85"/></svg>
+    <svg class="float-cloud" style="top:25%;--dur:40s;--delay:12s" width="90" height="45" viewBox="0 0 120 60"><ellipse cx="40" cy="40" rx="35" ry="22" fill="white" opacity="0.8"/><ellipse cx="70" cy="35" rx="30" ry="25" fill="white" opacity="0.85"/></svg>
+    <svg class="float-flower" style="bottom:15%;left:4%;--dur:4s" width="40" height="50" viewBox="0 0 40 50"><circle cx="20" cy="15" r="8" fill="#FF9EC4"/><circle cx="10" cy="22" r="8" fill="#FFB3D0"/><circle cx="30" cy="22" r="8" fill="#FFB3D0"/><circle cx="20" cy="18" r="5" fill="#FFD700"/><rect x="18" y="24" width="4" height="26" rx="2" fill="#7DD4A8"/></svg>
+    <svg class="float-flower" style="bottom:30%;right:6%;--dur:5s;--delay:1s" width="35" height="45" viewBox="0 0 40 50"><circle cx="20" cy="15" r="8" fill="#C9A8E8"/><circle cx="10" cy="22" r="8" fill="#D4BBF0"/><circle cx="30" cy="22" r="8" fill="#D4BBF0"/><circle cx="20" cy="18" r="5" fill="#FFE066"/><rect x="18" y="24" width="4" height="26" rx="2" fill="#7DD4A8"/></svg>
+  </div>
+
+  <svg class="bird" style="top:12%;--dur:28s" width="40" height="20" viewBox="0 0 40 20" aria-hidden="true">
+    <path d="M0 10 Q5 5 10 10 Q15 15 20 10 Q25 5 30 10 Q35 8 40 10" fill="none" stroke="#7A6B85" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+
+  <main>
+
+    <!-- HERO: Papu + two sisters -->
+    <section class="hero">
+      <h1>Happy Father's Day, Papu ❤️</h1><h2>my papa is the coolest</h2>
+
+      <div class="hero-illustration">
+        <svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Superhero father with two daughters">
+          <defs>
+            <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C5EDD8"/>
+              <stop offset="100%" stop-color="#A8E6C8"/>
+            </linearGradient>
+            <linearGradient id="capeGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FF6B9D"/>
+              <stop offset="100%" stop-color="#C084FC"/>
+            </linearGradient>
+          </defs>
+
+          <ellipse cx="360" cy="405" rx="340" ry="30" fill="url(#groundGrad)"/>
+          <ellipse cx="360" cy="400" rx="300" ry="20" fill="#7DD4A8" opacity="0.4"/>
+
+          <!-- Ground flowers -->
+          <g opacity="0.85">
+            <circle cx="70" cy="388" r="6" fill="#FF9EC4"/><circle cx="64" cy="383" r="5" fill="#FFB3D0"/><circle cx="76" cy="383" r="5" fill="#FFB3D0"/><rect x="68" y="391" width="3" height="12" rx="1" fill="#7DD4A8"/>
+            <circle cx="650" cy="390" r="6" fill="#C9A8E8"/><rect x="648" y="393" width="3" height="12" rx="1" fill="#7DD4A8"/>
+            <circle cx="180" cy="395" r="5" fill="#FFB88C"/><rect x="178" y="398" width="3" height="10" rx="1" fill="#7DD4A8"/>
+            <circle cx="520" cy="392" r="5" fill="#FF9EC4"/><rect x="518" y="395" width="3" height="10" rx="1" fill="#7DD4A8"/>
+          </g>
+
+          <!-- Sky clouds -->
+          <g opacity="0.75">
+            <ellipse cx="90" cy="55" rx="38" ry="20" fill="white"/>
+            <ellipse cx="120" cy="50" rx="28" ry="18" fill="white"/>
+            <ellipse cx="600" cy="48" rx="35" ry="20" fill="white"/>
+            <ellipse cx="630" cy="52" rx="28" ry="16" fill="white"/>
+          </g>
+
+          <!-- Stars & hearts -->
+          <polygon points="160,35 163,43 171,43 165,48 167,56 160,51 153,56 155,48 149,43 157,43" fill="#FFD700" opacity="0.8"/>
+          <polygon points="560,30 562,36 568,36 563,39 565,45 560,41 555,45 557,39 552,36 558,36" fill="#FFE066" opacity="0.7"/>
+          <path d="M330 75 C330 75 320 67 320 61 C320 57 323 55 326 55 C328 55 329.5 56.5 330 58 C330.5 56.5 332 55 334 55 C337 55 340 57 340 61 C340 67 330 75 330 75Z" fill="#FF9EC4" opacity="0.7"/>
+          <path d="M410 65 C410 65 402 59 402 54 C402 51 404 49 406 49 C407.5 49 408.5 50 409 51.5 C409.5 50 410.5 49 412 49 C414 49 416 51 416 54 C416 59 410 65 410 65Z" fill="#C9A8E8" opacity="0.6"/>
+
+          <!-- SUPERHERO PAPU -->
+          <g id="papu">
+            <path d="M320 185 Q290 260 270 330 Q310 310 360 300 Q390 310 430 330 Q410 260 380 185" fill="url(#capeGrad)" opacity="0.88">
+              <animate attributeName="d" dur="3s" repeatCount="indefinite"
+                values="M320 185 Q290 260 270 330 Q310 310 360 300 Q390 310 430 330 Q410 260 380 185;
+                        M320 185 Q285 265 265 335 Q310 315 360 305 Q390 315 435 335 Q415 265 380 185;
+                        M320 185 Q290 260 270 330 Q310 310 360 300 Q390 310 430 330 Q410 260 380 185"/>
+            </path>
+            <rect x="335" y="288" width="18" height="55" rx="8" fill="#4A6FA5"/>
+            <rect x="367" y="288" width="18" height="55" rx="8" fill="#4A6FA5"/>
+            <ellipse cx="344" cy="350" rx="14" ry="8" fill="#3D3D5C"/>
+            <ellipse cx="376" cy="350" rx="14" ry="8" fill="#3D3D5C"/>
+            <rect x="320" y="200" width="80" height="90" rx="15" fill="#5B8FD9"/>
+            <rect x="320" y="265" width="80" height="12" rx="3" fill="#FFD700"/>
+            <circle cx="360" cy="271" r="6" fill="#FF6B9D"/>
+            <rect x="285" y="205" width="40" height="16" rx="8" fill="#5B8FD9" transform="rotate(-30 305 213)"/>
+            <rect x="395" y="205" width="40" height="16" rx="8" fill="#5B8FD9" transform="rotate(30 415 213)"/>
+            <circle cx="278" cy="200" r="12" fill="#FFDAB9"/>
+            <circle cx="442" cy="200" r="12" fill="#FFDAB9"/>
+            <circle cx="360" cy="170" r="38" fill="#FFDAB9"/>
+            <path d="M325 150 Q360 125 395 150 Q390 140 360 133 Q310 140 325 150" fill="#4A3728"/>
+            <ellipse cx="347" cy="167" rx="5" ry="6" fill="#3D3D5C"/>
+            <ellipse cx="373" cy="167" rx="5" ry="6" fill="#3D3D5C"/>
+            <circle cx="349" cy="165" r="2" fill="white"/>
+            <circle cx="375" cy="165" r="2" fill="white"/>
+            <path d="M350 183 Q360 191 370 183" fill="none" stroke="#E08A70" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="347" cy="167" r="12" fill="none" stroke="#4A3728" stroke-width="2"/>
+            <circle cx="373" cy="167" r="12" fill="none" stroke="#4A3728" stroke-width="2"/>
+            <line x1="359" y1="167" x2="361" y2="167" stroke="#4A3728" stroke-width="2"/>
+            <circle cx="360" cy="235" r="18" fill="#FFD700"/>
+            <text x="360" y="241" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="16" font-weight="700" fill="#FF6B9D">P</text>
+            <rect x="322" y="153" width="76" height="8" rx="4" fill="#FF6B9D" opacity="0.55"/>
+          </g>
+
+          <!-- SISTER 1 (left) — pink dress, pigtails -->
+          <g id="sister-one">
+            <path d="M155 298 L175 352 L135 352 Z" fill="#FF9EC4"/>
+            <rect x="145" y="298" width="30" height="38" rx="8" fill="#FF9EC4"/>
+            <rect x="148" y="348" width="10" height="28" rx="5" fill="#FFDAB9"/>
+            <rect x="164" y="348" width="10" height="28" rx="5" fill="#FFDAB9"/>
+            <ellipse cx="153" cy="375" rx="8" ry="5" fill="#FF8CB8"/>
+            <ellipse cx="169" cy="375" rx="8" ry="5" fill="#FF8CB8"/>
+            <circle cx="160" cy="275" r="26" fill="#FFDAB9"/>
+            <circle cx="136" cy="265" r="10" fill="#5C3317"/>
+            <circle cx="184" cy="265" r="10" fill="#5C3317"/>
+            <path d="M136 245 Q160 232 184 245 Q160 238 136 245" fill="#5C3317"/>
+            <ellipse cx="152" cy="273" rx="4" ry="5" fill="#3D3D5C"/>
+            <ellipse cx="168" cy="273" rx="4" ry="5" fill="#3D3D5C"/>
+            <circle cx="153" cy="271" r="1.5" fill="white"/>
+            <circle cx="169" cy="271" r="1.5" fill="white"/>
+            <path d="M153 285 Q160 291 167 285" fill="none" stroke="#E08A70" stroke-width="2" stroke-linecap="round"/>
+            <rect x="125" y="302" width="28" height="11" rx="5" fill="#FFDAB9" transform="rotate(-50 139 307)"/>
+            <rect x="170" y="302" width="28" height="11" rx="5" fill="#FFDAB9" transform="rotate(50 184 307)"/>
+            <rect x="125" y="382" width="72" height="24" rx="12" fill="white" opacity="0.95" stroke="#FF9EC4" stroke-width="2"/>
+            <text x="161" y="400" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="14" font-weight="600" fill="#FF6B9D">Khushi</text>
+          </g>
+
+          <!-- SISTER 2 (right) — lavender dress, ponytail -->
+          <g id="sister-two">
+            <path d="M505 300 L525 354 L465 354 Z" fill="#C9A8E8"/>
+            <rect x="485" y="300" width="30" height="38" rx="8" fill="#C084FC"/>
+            <rect x="488" y="350" width="10" height="28" rx="5" fill="#FFDAB9"/>
+            <rect x="504" y="350" width="10" height="28" rx="5" fill="#FFDAB9"/>
+            <ellipse cx="493" cy="377" rx="8" ry="5" fill="#D4BBF0"/>
+            <ellipse cx="509" cy="377" rx="8" ry="5" fill="#D4BBF0"/>
+            <circle cx="500" cy="277" r="26" fill="#FFDAB9"/>
+            <path d="M476 260 Q500 248 524 260 Q500 252 476 260" fill="#2C1810"/>
+            <ellipse cx="510" cy="255" rx="8" ry="12" fill="#2C1810" transform="rotate(20 510 255)"/>
+            <ellipse cx="492" cy="275" rx="4" ry="5" fill="#3D3D5C"/>
+            <ellipse cx="508" cy="275" rx="4" ry="5" fill="#3D3D5C"/>
+            <circle cx="493" cy="273" r="1.5" fill="white"/>
+            <circle cx="509" cy="273" r="1.5" fill="white"/>
+            <path d="M493 287 Q500 293 507 287" fill="none" stroke="#E08A70" stroke-width="2" stroke-linecap="round"/>
+            <rect x="465" y="305" width="28" height="11" rx="5" fill="#FFDAB9" transform="rotate(-50 479 310)"/>
+            <rect x="510" y="305" width="28" height="11" rx="5" fill="#FFDAB9" transform="rotate(50 524 310)"/>
+            <rect x="465" y="384" width="72" height="24" rx="12" fill="white" opacity="0.95" stroke="#C9A8E8" stroke-width="2"/>
+            <text x="501" y="402" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="14" font-weight="600" fill="#C084FC">Tanvi</text>
+          </g>
+
+          <!-- Banner -->
+          <rect x="255" y="88" width="210" height="38" rx="19" fill="white" opacity="0.92" stroke="#FFD700" stroke-width="2"/>
+          <text x="360" y="114" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="17" font-weight="700" fill="#FF6B9D">★ OUR SUPER PAPU ★</text>
+        </svg>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 24 C14 24 2 16 2 9 C2 5 5 3 8 3 C10.5 3 12.5 4.5 14 6.5 C15.5 4.5 17.5 3 20 3 C23 3 26 5 26 9 C26 16 14 24 14 24Z" fill="#FF9EC4"/></svg>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- SUPERHERO POWERS — pictures only -->
+    <!-- <section>
+      <h2 class="section-title">Papu's Superpowers</h2>
+      <div class="cards-grid">
+        <div class="glass-card pic-card">
+          <div class="pic-card-art">
+            <svg viewBox="0 0 160 160"><rect width="160" height="160" rx="24" fill="#B8E4F9"/><rect x="45" y="55" width="70" height="50" rx="8" fill="#5B8FD9"/><circle cx="60" cy="80" r="14" fill="#FFD700" stroke="#F5A623" stroke-width="2"/><circle cx="100" cy="80" r="14" fill="#FFD700" stroke="#F5A623" stroke-width="2"/><rect x="68" y="42" width="24" height="16" rx="4" fill="#4A6FA5"/><line x1="50" y1="68" x2="110" y2="68" stroke="#7EC8E8" stroke-width="2"/><text x="80" y="130" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="11" fill="#4A6FA5">ENGINEER</text></svg>
+          </div>
+          <h3>⚙️ Engineer</h3>
+        </div>
+        <div class="glass-card pic-card">
+          <div class="pic-card-art">
+            <svg viewBox="0 0 160 160"><rect width="160" height="160" rx="24" fill="#E8D5F5"/><rect x="35" y="70" width="90" height="10" rx="3" fill="#8B6914"/><polygon points="80,35 115,68 45,68" fill="#C9A8E8"/><rect x="76" y="78" width="8" height="35" rx="2" fill="#8B6914"/><text x="80" y="55" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="14" fill="#C084FC">ABC</text><text x="80" y="130" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="11" fill="#9A8BA5">TEACHER</text></svg>
+          </div>
+          <h3>📚 Teacher</h3>
+        </div>
+        <div class="glass-card pic-card">
+          <div class="pic-card-art">
+            <svg viewBox="0 0 160 160"><rect width="160" height="160" rx="24" fill="#FFE8CC"/><circle cx="80" cy="68" r="32" fill="#FFD700"/><rect x="74" y="95" width="12" height="28" rx="3" fill="#8B6914"/><path d="M68 58 Q80 48 92 58" fill="none" stroke="#FF8C42" stroke-width="2"/><circle cx="70" cy="65" r="3" fill="#3D3D5C"/><circle cx="90" cy="65" r="3" fill="#3D3D5C"/><text x="80" y="130" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="11" fill="#F5A623">SOLVER</text></svg>
+          </div>
+          <h3>💡 Problem Solver</h3>
+        </div>
+        <div class="glass-card pic-card">
+          <div class="pic-card-art">
+            <svg viewBox="0 0 160 160"><rect width="160" height="160" rx="24" fill="#C5EDD8"/><circle cx="80" cy="62" r="26" fill="#FFDAB9"/><path d="M58 52 Q80 38 102 52" fill="#4A3728"/><path d="M45 115 Q80 95 115 115" fill="#7DD4A8"/><polygon points="80,28 84,38 95,38 86,45 89,55 80,48 71,55 74,45 65,38 76,38" fill="#FFD700"/><text x="80" y="130" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="11" fill="#5A9E78">GUIDE</text></svg>
+          </div>
+          <h3>🧭 Life Guide</h3>
+        </div>
+        <div class="glass-card pic-card">
+          <div class="pic-card-art">
+            <svg viewBox="0 0 160 160"><rect width="160" height="160" rx="24" fill="#FFD6E8"/><polygon points="80,30 115,75 45,75" fill="#FF9EC4"/><rect x="65" y="75" width="30" height="35" rx="4" fill="#FFB88C"/><circle cx="80" cy="48" r="6" fill="#FFD700"/><circle cx="115" cy="100" r="16" fill="none" stroke="#4A6FA5" stroke-width="3"/><circle cx="115" cy="100" r="3" fill="#4A6FA5"/><text x="80" y="130" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="11" fill="#FF6B9D">BUILDER</text></svg>
+          </div>
+          <h3>🔧 Builder</h3>
+        </div>
+        <div class="glass-card pic-card">
+          <div class="pic-card-art">
+            <svg viewBox="0 0 160 160"><rect width="160" height="160" rx="24" fill="#FFF0F5"/><circle cx="60" cy="58" r="20" fill="#FFDAB9"/><circle cx="100" cy="58" r="20" fill="#FFDAB9"/><path d="M42 48 Q60 35 78 48" fill="#5C3317"/><path d="M82 48 Q100 35 118 48" fill="#2C1810"/><path d="M48 108 Q80 90 112 108" fill="#FF9EC4"/><path d="M68 108 Q80 98 92 108" fill="#C084FC"/><text x="80" y="130" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="11" fill="#FF6B9D">FRIEND</text></svg>
+          </div>
+          <h3>🤝 Best Friend</h3>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <svg width="30" height="36" viewBox="0 0 40 50"><circle cx="20" cy="15" r="8" fill="#C9A8E8"/><circle cx="10" cy="22" r="8" fill="#D4BBF0"/><circle cx="30" cy="22" r="8" fill="#D4BBF0"/><circle cx="20" cy="18" r="5" fill="#FFD700"/><rect x="18" y="24" width="4" height="18" rx="2" fill="#7DD4A8"/></svg>
+      <div class="divider-line"></div>
+    </div> -->
+
+    <!-- ADVENTURES — big picture gallery -->
+    
+
+
+    <!-- DAD GOOGLE — visual only -->
+    <section>
+      <h2 class="section-title">Papu Knows Everything</h2>
+      <div class="glass-card search-visual">
+        <div class="search-logo">
+          <span class="g1">P</span><span class="g2">a</span><span class="g3">p</span><span class="g4">u</span><span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g1">l</span><span class="g2">e</span>
+        </div>
+        <div class="search-icons">
+          <div class="search-icon-card glass-card">
+            <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="14" fill="#FFE8CC"/><rect x="28" y="20" width="16" height="8" rx="2" fill="#8B6914" transform="rotate(45 36 24)"/><circle cx="36" cy="42" r="14" fill="none" stroke="#F5A623" stroke-width="3"/><line x1="46" y1="48" x2="56" y2="58" stroke="#8B6914" stroke-width="3" stroke-linecap="round"/></svg>
+            <span>Fix it? Ask Papu</span>
+          </div>
+          <div class="search-icon-card glass-card">
+            <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="14" fill="#B8E4F9"/><rect x="18" y="28" width="36" height="26" rx="4" fill="#5B8FD9"/><circle cx="28" cy="41" r="7" fill="#FFD700"/><circle cx="44" cy="41" r="7" fill="#FFD700"/></svg>
+            <span>Engineering? Ask Papu</span>
+          </div>
+          <div class="search-icon-card glass-card">
+            <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="14" fill="#E8D5F5"/><circle cx="36" cy="32" r="16" fill="#FFD700"/><rect x="33" y="46" width="6" height="14" rx="2" fill="#8B6914"/></svg>
+            <span>Science? Ask Papu</span>
+          </div>
+          <div class="search-icon-card glass-card">
+            <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="14" fill="#C5EDD8"/><circle cx="36" cy="30" r="14" fill="#FFDAB9"/><path d="M24 24 Q36 16 48 24" fill="#4A3728"/><path d="M18 55 Q36 42 54 55" fill="#7DD4A8"/></svg>
+            <span>Life advice? Ask Papu</span>
+          </div>
+          <div class="search-icon-card glass-card">
+            <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="14" fill="#FFD6E8"/><circle cx="24" cy="48" r="12" fill="none" stroke="#4A6FA5" stroke-width="2"/><circle cx="48" cy="48" r="12" fill="none" stroke="#4A6FA5" stroke-width="2"/><line x1="24" y1="48" x2="36" y2="28" stroke="#4A6FA5" stroke-width="2"/><line x1="48" y1="48" x2="36" y2="28" stroke="#4A6FA5" stroke-width="2"/></svg>
+            <span>Build it? Ask Papu</span>
+          </div>
+          <div class="search-icon-card glass-card">
+            <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="14" fill="#FFF0F5"/><circle cx="28" cy="32" r="12" fill="#FFDAB9"/><circle cx="44" cy="32" r="12" fill="#FFDAB9"/><path d="M18 55 Q36 42 54 55" fill="#FF9EC4"/><path d="M30 55 Q36 48 42 55" fill="#C084FC"/></svg>
+            <span>Everything? Ask Papu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 24 C14 24 2 16 2 9 C2 5 5 3 8 3 C10.5 3 12.5 4.5 14 6.5 C15.5 4.5 17.5 3 20 3 C23 3 26 5 26 9 C26 16 14 24 14 24Z" fill="#FF9EC4"/></svg>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- THANK YOU — one picture + few words -->
+    <section>
+      <h2 class="section-title">Thank You, Papu</h2>
+      <div class="glass-card thank-you">
+        <div class="thank-you-art">
+          <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="280" rx="20" fill="#FFF0F5"/>
+            <!-- Hearts border -->
+            <path d="M40 40 C40 40 32 32 32 26 C32 22 35 20 38 20 C40 20 41.5 21.5 42 23 C42.5 21.5 44 20 46 20 C49 20 52 22 52 26 C52 32 40 40 40 40Z" fill="#FF9EC4"/>
+            <path d="M280 40 C280 40 272 32 272 26 C272 22 275 20 278 20 C280 20 281.5 21.5 282 23 C282.5 21.5 284 20 286 20 C289 20 292 22 292 26 C292 32 280 40 280 40Z" fill="#C9A8E8"/>
+            <path d="M160 30 C160 30 148 22 148 16 C148 12 151 10 154 10 C156 10 157.5 11.5 158 13 C158.5 11.5 160 10 162 10 C165 10 168 12 168 16 C168 22 160 30 160 30Z" fill="#FFB3D0"/>
+            <!-- Flowers -->
+            <circle cx="50" cy="240" r="10" fill="#FF9EC4"/><circle cx="38" cy="248" r="8" fill="#FFB3D0"/><circle cx="62" cy="248" r="8" fill="#FFB3D0"/><rect x="48" y="248" width="4" height="20" rx="2" fill="#7DD4A8"/>
+            <circle cx="270" cy="240" r="10" fill="#C9A8E8"/><circle cx="258" cy="248" r="8" fill="#D4BBF0"/><circle cx="282" cy="248" r="8" fill="#D4BBF0"/><rect x="268" y="248" width="4" height="20" rx="2" fill="#7DD4A8"/>
+            <!-- Family: Papu + 2 sisters -->
+            <circle cx="160" cy="90" r="32" fill="#FFDAB9"/>
+            <path d="M135 78 Q160 58 185 78" fill="#4A3728"/>
+            <path d="M120 130 Q160 105 200 130" fill="#5B8FD9"/>
+            <circle cx="110" cy="155" r="24" fill="#FFDAB9"/>
+            <circle cx="92" cy="148" r="10" fill="#5C3317"/><circle cx="128" cy="148" r="10" fill="#5C3317"/>
+            <path d="M92 180 Q110 160 128 180" fill="#FF9EC4"/>
+            <circle cx="210" cy="155" r="24" fill="#FFDAB9"/>
+            <ellipse cx="228" cy="148" rx="10" ry="14" fill="#2C1810" transform="rotate(15 228 148)"/>
+            <path d="M192 180 Q210 160 228 180" fill="#C084FC"/>
+            <path d="M140 105 Q160 115 180 105" fill="none" stroke="#E08A70" stroke-width="2"/>
+            <path d="M100 165 C100 165 108 175 120 175 C132 175 140 165 140 165" fill="none" stroke="#FF6B9D" stroke-width="1.5"/>
+            <path d="M200 165 C200 165 208 175 220 175 C232 175 240 165 240 165" fill="none" stroke="#C084FC" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="thank-you-message">
+          <span class="highlight">I love you more than words can express.</span>
+          <p>Our superhero. Our everything. ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <svg width="26" height="26" viewBox="0 0 20 20"><polygon points="10,1 12.5,7.5 19,7.5 13.5,12 16,19 10,15 4,19 6.5,12 1,7.5 7.5,7.5" fill="#FFD700"/></svg>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- TROPHY -->
+    <section class="trophy-section">
+      <div class="trophy-wrap">
+        <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World's Best Dad trophy">
+          <defs>
+            <linearGradient id="trophyGold" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFE066"/>
+              <stop offset="50%" stop-color="#FFD700"/>
+              <stop offset="100%" stop-color="#F5A623"/>
+            </linearGradient>
+            <linearGradient id="trophyShine" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <polygon points="40,40 43,50 53,50 45,56 48,66 40,60 32,66 35,56 27,50 37,50" fill="#FFD700" opacity="0.7">
+            <animate attributeName="opacity" dur="2s" values="0.4;1;0.4" repeatCount="indefinite"/>
+          </polygon>
+          <polygon points="260,50 262,57 269,57 263,61 265,68 260,64 255,68 257,61 251,57 258,57" fill="#FFE066" opacity="0.6">
+            <animate attributeName="opacity" dur="2.5s" values="0.3;0.9;0.3" repeatCount="indefinite"/>
+          </polygon>
+          <polygon points="150,20 152,26 158,26 153,29 155,35 150,31 145,35 147,29 142,26 148,26" fill="#FFD700" opacity="0.8">
+            <animate attributeName="opacity" dur="1.8s" values="0.5;1;0.5" repeatCount="indefinite"/>
+          </polygon>
+          <rect x="100" y="300" width="100" height="20" rx="6" fill="url(#trophyGold)"/>
+          <rect x="90" y="315" width="120" height="15" rx="5" fill="#F5A623"/>
+          <rect x="80" y="325" width="140" height="12" rx="4" fill="#E8941A"/>
+          <rect x="135" y="240" width="30" height="65" rx="5" fill="url(#trophyGold)"/>
+          <rect x="138" y="245" width="8" height="50" rx="3" fill="url(#trophyShine)"/>
+          <path d="M90 240 Q90 160 150 140 Q210 160 210 240 Z" fill="url(#trophyGold)" stroke="#E8941A" stroke-width="2"/>
+          <path d="M100 230 Q100 170 150 155 Q200 170 200 230 Z" fill="url(#trophyShine)"/>
+          <path d="M90 220 Q50 220 50 180 Q50 150 80 155" fill="none" stroke="url(#trophyGold)" stroke-width="10" stroke-linecap="round"/>
+          <path d="M210 220 Q250 220 250 180 Q250 150 220 155" fill="none" stroke="url(#trophyGold)" stroke-width="10" stroke-linecap="round"/>
+          <polygon points="150,175 156,190 172,190 160,200 165,215 150,205 135,215 140,200 128,190 144,190" fill="#FF6B9D"/>
+          <circle cx="150" cy="210" r="22" fill="white" stroke="#FFD700" stroke-width="3"/>
+          <text x="150" y="218" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="22" font-weight="700" fill="#F5A623">1</text>
+          <rect x="70" y="255" width="160" height="35" rx="17" fill="#FF6B9D"/>
+          <rect x="75" y="258" width="150" height="29" rx="14" fill="#FF9EC4"/>
+          <text x="150" y="278" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="14" font-weight="700" fill="white">WORLD'S BEST PAPU</text>
+          <path d="M60 130 C60 130 52 122 52 116 C52 112 55 110 58 110 C60 110 61.5 111.5 62 113 C62.5 111.5 64 110 66 110 C69 110 72 112 72 116 C72 122 60 130 60 130Z" fill="#FF9EC4" opacity="0.7"/>
+          <path d="M240 120 C240 120 232 112 232 106 C232 102 235 100 238 100 C240 100 241.5 101.5 242 103 C242.5 101.5 244 100 246 100 C249 100 252 102 252 106 C252 112 240 120 240 120Z" fill="#C9A8E8" opacity="0.6"/>
+        </svg>
+      </div>
+      <h2 class="trophy-title">World's Best Papu</h2>
+      <p class="closing-message">Forever our superhero. ❤️</p>
+    </section>
+
+  </main>
+
+  <footer>Made with <span>♥</span> — Happy Father's Day 2026</footer>
+
+</body>
+</html>
